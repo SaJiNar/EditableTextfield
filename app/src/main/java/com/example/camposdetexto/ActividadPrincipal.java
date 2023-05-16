@@ -1,6 +1,7 @@
 package com.example.camposdetexto;
 
 import android.os.Bundle;
+import android.text.Editable;
 import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
@@ -21,8 +22,21 @@ public class ActividadPrincipal extends AppCompatActivity {
             findViewById(R.id.campo_2).requestFocus();
         }
 
-        EditText campo1 = (EditText) findViewById(R.id.campo_cursor);
+        EditText campo1 = (EditText) findViewById(R.id.campo_dos_palabras);
+        Editable texto = campo1.getText();
+        campo1.selectAll();
         Log.d("Posicion cursor:", String.valueOf(campo1.getSelectionEnd()));
+
+        int start = 0;
+        int end = 0;
+
+        for (int i = start; i < texto.length(); i++) {
+            if (texto.charAt(i) == ' ') {
+                end = i;
+            }
+        }
+
+        campo1.setSelection(start, end);
     }
 
     public void verValor(View view) {
