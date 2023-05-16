@@ -37,10 +37,79 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
-        android:layout_marginEnd="-7dp"
-        android:layout_marginRight="-7dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="7dp"
         android:hint="Nombre del conductor"
-        android:singleLine="true"></EditText>
+        android:singleLine="true">
+    </EditText>
+
+    <EditText
+        android:id="@+id/marca_producto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:ems="5"
+        android:hint="Marca"
+        android:inputType="text">
+    </EditText>
+
+    <EditText
+        android:id="@+id/campo_tarjeta"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:digits="1234567890 "
+        android:singleLine="true"
+        android:maxLength="19"
+        android:inputType="number"
+        android:ems="9"
+        android:hint="Número de Tarjeta">
+    </EditText>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/campo_no_editable"
+        android:enabled="false"
+        android:hint="No Editable">
+    </EditText>
+
+    <EditText
+        android:id="@+id/campo_sin_foco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:hint="Sin foco">
+    </EditText>
+
+    <EditText
+        android:id="@+id/campo_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Foco 1"
+        android:nextFocusRight="@id/campo_2"
+        android:singleLine="true">
+    </EditText>
+
+    <EditText
+        android:id="@+id/campo_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Foco 2"
+        android:nextFocusRight="@id/campo_1"
+        android:singleLine="true">
+    </EditText>
+
+    <EditText
+        android:id="@+id/campo_cursor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cursor"
+        android:hint="Selección"
+        android:singleLine="true">
+    </EditText>
 
     <Button
         android:id="@+id/boton"
